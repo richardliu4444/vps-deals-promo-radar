@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare VPS Deals — All Providers Side by Side | {{brand}}</title>
+    <meta name="description" content="Compare VPS hosting deals from all providers side by side. Sort by price, provider, and availability.">
+    <link rel="canonical" href="https://{{domain}}/compare.html">
+    
+    <meta property="og:title" content="Compare VPS Deals | {{brand}}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://{{domain}}/compare.html">
+    <meta name="twitter:card" content="summary">
+    
+    <script type="application/ld+json">{{itemlist_jsonld}}</script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f1117; color: #e4e4e7; line-height: 1.6; }
+        .container { max-width: 960px; margin: 0 auto; padding: 1.5rem; }
+        header { border-bottom: 1px solid #2a2d35; padding-bottom: 1rem; margin-bottom: 2rem; }
+        header h1 { font-size: 1.4rem; color: #f4f4f5; }
+        header p { color: #a1a1aa; font-size: 0.9rem; }
+        table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+        th { text-align: left; padding: 0.75rem; background: #1a1b23; border-bottom: 1px solid #2a2d35; color: #a1a1aa; font-size: 0.8rem; text-transform: uppercase; }
+        td { padding: 0.75rem; border-bottom: 1px solid #2a2d35; }
+        td a { color: #818cf8; text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .price { font-weight: 700; color: #818cf8; }
+        .nav a { color: #818cf8; text-decoration: none; font-size: 0.85rem; margin-right: 1rem; }
+        footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #2a2d35; color: #71717a; font-size: 0.8rem; }
+        .generated { color: #52525b; font-size: 0.75rem; margin-top: 0.5rem; }
+        .table-wrap { overflow-x: auto; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Compare VPS Deals</h1>
+        <p>All providers, sorted by price (cheapest first).</p>
+        <div class="nav">
+            <a href="index.html">Home</a>
+        </div>
+    </header>
+    
+    <div class="table-wrap">
+    <table>
+        <thead><tr><th>Provider</th><th>Plan</th><th>Price</th><th>Currency</th><th>Link</th></tr></thead>
+        <tbody>{{COMPARE_ROWS}}</tbody>
+    </table>
+    </div>
+    
+    <div class="generated">Last updated: {{generated}}</div>
+    
+    <footer>
+        <p>{{brand}} — Prices sourced from official provider pages. No fabricated data. Visit provider for current pricing.</p>
+    </footer>
+</div>
+</body>
+</html>

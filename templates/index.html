@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPS Deals & Hosting Promos — Updated Daily | {{brand}}</title>
+    <meta name="description" content="Compare VPS hosting deals and promotions from DigitalOcean, Vultr, Linode, Hetzner, OVHcloud, Contabo and Hostinger. Real prices, updated automatically.">
+    <link rel="canonical" href="https://{{domain}}/index.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="VPS Deals & Hosting Promos | {{brand}}">
+    <meta property="og:description" content="Compare VPS hosting deals from top providers. Real prices, updated automatically every 6 hours.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://{{domain}}/">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- JSON-LD: ItemList -->
+    <script type="application/ld+json">{{itemlist_jsonld}}</script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f1117; color: #e4e4e7; line-height: 1.6; }
+        .container { max-width: 960px; margin: 0 auto; padding: 1.5rem; }
+        header { border-bottom: 1px solid #2a2d35; padding-bottom: 1rem; margin-bottom: 2rem; }
+        header h1 { font-size: 1.6rem; color: #f4f4f5; }
+        header p { color: #a1a1aa; font-size: 0.9rem; margin-top: 0.25rem; }
+        .stats { display: flex; gap: 2rem; margin: 1rem 0 2rem; }
+        .stat { text-align: center; }
+        .stat-num { font-size: 1.5rem; font-weight: 700; color: #818cf8; }
+        .stat-label { font-size: 0.75rem; color: #71717a; text-transform: uppercase; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+        .card { display: block; background: #1a1b23; border: 1px solid #2a2d35; border-radius: 0.75rem; padding: 1.25rem; text-decoration: none; color: inherit; transition: border-color 0.2s; }
+        .card:hover { border-color: #6366f1; }
+        .card-provider { font-size: 0.75rem; color: #a1a1aa; text-transform: uppercase; letter-spacing: 0.05em; }
+        .card-title { font-size: 0.95rem; color: #f4f4f5; margin: 0.5rem 0; min-height: 2.4rem; }
+        .card-price { font-size: 1.25rem; font-weight: 700; color: #818cf8; }
+        .nav { display: flex; gap: 1rem; margin-top: 1rem; }
+        .nav a { color: #818cf8; text-decoration: none; font-size: 0.85rem; }
+        .nav a:hover { text-decoration: underline; }
+        footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #2a2d35; color: #71717a; font-size: 0.8rem; }
+        .generated { color: #52525b; font-size: 0.75rem; margin-top: 0.5rem; }
+        @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>VPS Deals & Hosting Promos</h1>
+        <p>Real prices from top VPS providers — updated every 6 hours automatically.</p>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="compare.html">Compare All</a>
+        </div>
+    </header>
+    
+    <div class="stats">
+        <div class="stat">
+            <div class="stat-num">{{total_deals}}</div>
+            <div class="stat-label">Active Deals</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">7</div>
+            <div class="stat-label">Providers</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">6h</div>
+            <div class="stat-label">Update Cycle</div>
+        </div>
+    </div>
+    
+    <div class="grid">
+        {{DEAL_CARDS}}
+    </div>
+    
+    <div class="generated">Last updated: {{generated}}</div>
+    
+    <footer>
+        <p>{{brand}} — VPS hosting deals aggregated from public provider pages. No login, no tracking, no fabricated prices.</p>
+        <p style="margin-top:0.5rem">Site rules described in <a href="https://github.com/vps-deals/vps-deals-promo-radar" style="color:#818cf8">I-Lang protocol</a>. Data sourced from official provider pricing pages.</p>
+    </footer>
+</div>
+</body>
+</html>

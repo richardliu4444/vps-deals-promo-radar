@@ -1,0 +1,56 @@
+[
+  {
+    "title": "OVHcloud - From $4.54 /month",
+    "provider": "OVHcloud",
+    "price": "4.54",
+    "currency": "USD",
+    "offer_url": "https://www.ovhcloud.com/en/vps/",
+    "source_url": "https://www.ovhcloud.com/en/vps/",
+    "fetched_at": "2026-09-15T18:41:01.831261+00:00"
+  },
+  {
+    "title": "OVHcloud - From $8.50 /month",
+    "provider": "OVHcloud",
+    "price": "8.50",
+    "currency": "USD",
+    "offer_url": "https://www.ovhcloud.com/en/vps/",
+    "source_url": "https://www.ovhcloud.com/en/vps/",
+    "fetched_at": "2026-09-15T18:41:01.831412+00:00"
+  },
+  {
+    "title": "OVHcloud - From $12.32 /month",
+    "provider": "OVHcloud",
+    "price": "12.32",
+    "currency": "USD",
+    "offer_url": "https://www.ovhcloud.com/en/vps/",
+    "source_url": "https://www.ovhcloud.com/en/vps/",
+    "fetched_at": "2026-09-15T18:41:01.831524+00:00"
+  },
+  {
+    "title": "OVHcloud - From $23.37 /month",
+    "provider": "OVHcloud",
+    "price": "23.37",
+    "currency": "USD",
+    "offer_url": "https://www.ovhcloud.com/en/vps/",
+    "source_url": "https://www.ovhcloud.com/en/vps/",
+    "fetched_at": "2026-09-15T18:41:01.831677+00:00"
+  },
+  {
+    "title": "OVHcloud - From $1.40 /month",
+    "provider": "OVHcloud",
+    "price": "1.40",
+    "currency": "USD",
+    "offer_url": "https://www.ovhcloud.com/en/vps/",
+    "source_url": "https://www.ovhcloud.com/en/vps/",
+    "fetched_at": "2026-09-15T18:41:01.832565+00:00"
+  },
+  {
+    "title": "OVHcloud - From $0.40 /month",
+    "provider": "OVHcloud",
+    "price": "0.40",
+    "currency": "USD",
+    "offer_url": "https://www.ovhcloud.com/en/vps/",
+    "source_url": "https://www.ovhcloud.com/en/vps/",
+    "fetched_at": "2026-09-15T18:41:01.832622+00:00"
+  }
+]

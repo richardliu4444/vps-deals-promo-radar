@@ -1,0 +1,42 @@
+ILANG
+[TYPE:config][PROJECT:vps-deals][LANG:zh]
+
+::STATE{@SITE, brand:vps-deals, niche:VPS hosting deals, domain:vps-deals-ata.pages.dev, locale:en-US}
+::STATE{@UPDATE, freq:6h, via:github-actions, tz:UTC}
+
+::MODULE{PROVIDERS|title:抓哪几家 这里改了站就变}
+  DigitalOcean | https://www.digitalocean.com | https://www.digitalocean.com/pricing | 
+  Vultr | https://www.vultr.com | https://www.vultr.com/promo/ | 
+  Linode | https://www.linode.com | https://www.linode.com/pricing/ | 
+  Hetzner | https://www.hetzner.com | https://www.hetzner.com/cloud/ | 
+  OVHcloud | https://www.ovhcloud.com | https://www.ovhcloud.com/en/vps/ | 
+  Contabo | https://contabo.com | https://contabo.com/en/vps/ | 
+  Hostinger | https://www.hostinger.com | https://www.hostinger.com/vps-hosting | 
+
+::MODULE{FIELDS|title:每条优惠提取什么}
+  title price currency offer_url valid_until source_url fetched_at
+
+::RULE{抓不到 price⇒这条不写 price 字段 也不写进结构化数据 不许拿估的填}
+::RULE{valid_until 已过⇒标记过期或下架 不许留着冒充有效}
+::RULE{抓不到 offer_url⇒用 source_url 顶上 不许编}
+::BOUNDARY{never:编优惠 编价格 编佣金|scope=permanent}
+::BOUNDARY{never:绕 robots.txt 抓登录后内容|scope=permanent}
+
+::MODULE{RENDER|title:页面怎么渲染}
+  index.html      首页 列全部优惠 按 price 升序
+  provider.html   厂商页 每家一页 列该家全部优惠
+  deal.html       优惠详情页 每条优惠一页 嵌 JSON-LD Offer
+  compare.html    对比页 同配置横排价格对比表
+
+::MODULE{SEO|title:结构化数据与索引}
+  Offer JSON-LD 每个详情页 price priceCurrency availability priceValidUntil url
+  ItemList JSON-LD 列表页 position url
+  BreadcrumbList 每页有层级
+  canonical 每页指向自己
+  sitemap.xml build.py 生成 lastmod 用真实抓取时间
+  robots.txt allow all sitemap 指向 sitemap.xml
+
+::MODULE{MONETIZE|title:变现路径}
+  联盟链接 模板里 offer_url 位置 如果 PROVIDERS 配了联盟链接就用 否则用裸链
+  出口 打包卖站 域名加品牌加收入史
+  ::BOUNDARY{never:品牌词竞价 cookie 注入|scope=permanent}
