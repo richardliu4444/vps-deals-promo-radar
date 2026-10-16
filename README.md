@@ -1,3 +1,5 @@
+> **Historical repository.** The canonical, actively maintained version of this project lives at https://github.com/666break/vpsdeals-promo-radar . This repository and its full commit history are preserved for reference only.
+
 # vps-deals-promo-radar
 
 Zero-cost, zero-server, auto-updating VPS hosting deals aggregator. Pure Python, GitHub Actions cron, Cloudflare Pages.
